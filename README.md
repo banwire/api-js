@@ -10,6 +10,7 @@ Para integrar utilizando sólo HTML, utiliza el siguiente formato:
 <script
     type="text/javascript"
     src="https://test.banwire.com/sw/checkout.js"
+    data-sandbox="true"
     data-user="userdemo"
     data-total="500.00"
     data-success-page="http://google.com"
@@ -27,6 +28,7 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
 <script
     type="text/javascript"
     src="https://test.banwire.com/sw/checkout.js"
+    data-sandbox="true"
     data-user="userdemo"
     data-title="Mi Comercio"
     data-total="500.00"
@@ -79,6 +81,8 @@ Para hacerlo pimero se debe incluir el archivo JS en HEAD o BODY de la página:
 Y utilizar el siguente formato para iniciar el servicio:
 ```javascript
 var SW = new BwGateway({
+        // Quitar o establecer a false cuando pase a produccion
+        sandbox: true,
         // Nombre de usuario de Banwire
         user: 'userdemo',
         // Titulo de la entana
