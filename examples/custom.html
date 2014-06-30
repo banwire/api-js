@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo de pago</title>
+<style>
+    body{
+        font-family: arial, tahoma, sans-serif;
+        padding: 30px;
+    }
+    .btn-pay{
+        display: inline-block;
+        padding: 10px 15px;
+        text-decoration: none;
+        background: blue;
+        border-radius: 6px;
+        color: white;
+    }
+</style>
+<script
+    type="text/javascript"
+    src="https://test.banwire.com/sw/checkout.js"
+    data-user="userdemo">
+</script>
+
+</head>
+<body>
+<h1>Pagina de pago del cliente</h1>
+
+<input type="button"
+   data-total="100"
+   data-item-name="Un solo item"
+   data-item-desc="Descripcion del item"
+   data-item-price="100"
+   data-item-qty="1"
+   onclick="SW.pay(this); return false;"
+   value="Pagar un solo articulo">
+
+
+</body>
+</html>
