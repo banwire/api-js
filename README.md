@@ -82,9 +82,11 @@ Se pueden crear suscripciones a pagos recurrentes donde al cliente se le puede e
 data-recurring="true"
 data-recurring-inteval="month"
 data-recurring-limit="10"
+data-recurring-start="2014-08-21"
 ```
 En donde la variable data-recurring-interval es el intervalo en el que se cobrará el pago y puede ser: "month" (mensualmente), "week" (semanalmente), "6months" (semestralmente), "annual" (anualmente), "3months" (trimestralmente)
 La variable data-recurring-limit determina el número de pagos a ejecutar antes que termine la suscripción. En caso de no definir esta variable, la suscripción nunca vencerá.
+En caso de no definir data-recurring-start, el pago inicial se efectuará de inmediato, en caso contrario el primer pago se realizará en la fecha especificada en esta variable en formato YYYY-MM-DD
 
 ## Integración utilizando Javascript
 
