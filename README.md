@@ -70,6 +70,22 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
 </script>
 ```
 
+### Integración para pagos con tarjeta-habientes representados 
+Para pagos en donde el tarjetahabiente es representado por un tercero en posesión de los datos e información confidencial del tarjeta-habiente, se debe agregar el siguiente parámetro.
+```html
+data-cust-represented="true"
+```
+
+### Integración para pagos recurrentes
+Se pueden crear suscripciones a pagos recurrentes donde al cliente se le puede efecturar un número determinados de pagos fijos durante un periodo determinado de tiempo. Se deben agregar las siguientes variables:
+```html
+data-recurring="true"
+data-recurring-inteval="month"
+data-recurring-limit="10"
+```
+En donde la variable data-recurring-interval es el intervalo en el que se cobrará el pago y puede ser: "month" (mensualmente), "week" (semanalmente), "6months" (semestralmente), "annual" (anualmente), "3months" (trimestralmente)
+La variable data-recurring-limit determina el número de pagos a ejecutar antes que termine la suscripción. En caso de no definir esta variable, la suscripción nunca vencerá.
+
 ## Integración utilizando Javascript
 
 Es posible realizar una integración más personalizable utilizando Javascript directamente.
