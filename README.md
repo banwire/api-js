@@ -269,10 +269,9 @@ auth_code | Alfanumérico | Código unico de autorización de la transacción
 reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
 id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
-token | Alfanumérico | Token
-card_id | Integer | Identificador de la tarjeta
-recurring_id | Integer | Identificador del pago recurrente en banwire
+token | Alfanumérico | Token identificador de la suscripcion
 hash | sha1 | Hash de seguridad*
+cancel_url | URL | URL para cancelar la suscripción
 
 ## Ejemplos en vivo
 [Ir a la página de ejemplos en vivo](https://test.banwire.com/sw/examples)
