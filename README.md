@@ -114,7 +114,7 @@ var SW = new BwGateway({
         // Moneda
         currency: 'MXN',
         // Total de la compra
-        total: 100,
+        total: "100.00",
         // Meses sin intereses
         months: [3,6],
         // Arreglo con los items de compra
@@ -161,28 +161,42 @@ var SW = new BwGateway({
         paymentOptions: 'all', // visa,mastercard,amex,oxxo
         // Mostrar o no pagina de resumen de compra
         reviewOrder: true,
+        // Mostrar o no mostrar los campos de envio
+        showShipping: true,
+        // Solamente para pagos recurrentes o suscripciones
+        recurring: {
+            // Cada cuanto se ejecutará el pago "month","year" o un entero representando numero de días
+            interval: "month",
+            // Opcional: Limitar el número de pagos (si no se pone entonces no tendrá limite)
+            limit: 10, 
+            // Opcional: Fecha del primer cargo (en caso de no especificar se ejecutará de inmediato)
+            start: "2014-01-01", // Formaro YYYY-MM-DD
+            // Opcional: En caso de que los pagos subsecuentes (después del primero)
+            // tengan un monto distinto al inicial
+            total: "50.00"
+        }
         // Handler en caso de exito en el pago
         successPage: 'http://google.com',
-        onSuccess: function(){
+        onSuccess: function(data){
             alert("¡Gracias por tu pago!")
         },
         // Pago pendiente OXXO
         pendingPage: 'http://yahoo.com',
-        onPending: function(){
+        onPending: function(data){
             alert("El pago está pendiente por ser efectuado");
         },
         // Pago challenge
         challengePage: 'http://challenge.com',
-        onChallenge: function(){
+        onChallenge: function(data){
             alert("Pago enviado a validaciones de seguridad");
         },
         // Handler en caso de error en el pago
         errorPage: 'http://facebook.com',
-        onError: function(error){
+        onError: function(data){
             alert("Error en el pago");
         },
         // Cuando cierra el popup sin completar el proceso
-        onCancel: function(){
+        onCancel: function(data){
             console.log("Se cancelo el proceso");
         }
     });
