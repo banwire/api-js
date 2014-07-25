@@ -111,11 +111,11 @@ var SW = new BwGateway({
         reference: 'testref01',
         // Concepto
         concept: 'pago de prueba',
-        // Moneda
+        // Opcional: Moneda
         currency: 'MXN',
         // Total de la compra
         total: "100.00",
-        // Meses sin intereses
+        // Opcional: Meses sin intereses
         months: [3,6],
         // Arreglo con los items de compra
         items: [
@@ -157,8 +157,8 @@ var SW = new BwGateway({
             country: "MEX",
             zip: "14145"
         },
-        // Opciones de pago
-        paymentOptions: 'all', // visa,mastercard,amex,oxxo
+        // Opciones de pago, por defecto es "all". Puede incluir varias opciones separadas por comas
+        paymentOptions: 'all', // visa,mastercard,amex,oxxo,speifast,all
         // Mostrar o no pagina de resumen de compra
         reviewOrder: true,
         // Mostrar o no mostrar los campos de envio
