@@ -175,6 +175,8 @@ var SW = new BwGateway({
             // tengan un monto distinto al inicial
             total: "50.00"
         }
+        // URL donde se van a enviar todas las notificaciones por HTTP POST de manera asoncrónica
+        notifyUrl: "https://www.mipagina.com/recibir.php",
         // Handler en caso de exito en el pago
         successPage: 'http://google.com',
         onSuccess: function(data){
@@ -200,10 +202,22 @@ var SW = new BwGateway({
             console.log("Se cancelo el proceso");
         }
     });
+
+function pagar() {
+    // Podemos pagar con los valores por defecto
+    SW.pay();
+    
+    /* O podemos modificar los valores antes de efectuar el pago
+    SW.pay({
+        total: 500,
+        concept: "Concepto nuevo"
+    });
+    */
+}
 ```
 Se puede invocar el pago desde cualquier botón de pago:
 ```html
-<a href="#" onclick="SW.pay(this); return false" class="btn-pay">Pagar</a>
+<a href="#" onclick="pagar();" class="btn-pay">Pagar</a>
 ```
 
 # Respuestas y notificaciones
