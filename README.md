@@ -174,7 +174,7 @@ var SW = new BwGateway({
             // Opcional: En caso de que los pagos subsecuentes (después del primero)
             // tengan un monto distinto al inicial
             total: "50.00"
-        }
+        },
         // URL donde se van a enviar todas las notificaciones por HTTP POST de manera asoncrónica
         notifyUrl: "https://www.mipagina.com/recibir.php",
         // Handler en caso de exito en el pago
