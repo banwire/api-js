@@ -273,5 +273,8 @@ token | Alfanumérico | Token identificador de la suscripcion
 hash | sha1 | Hash de seguridad*
 cancel_url | URL | URL para cancelar la suscripción
 
+## Cancelar suscripción de pago recurrente
+Para cancelar una suscripción de pago recurrente se debe envíar el parámetro id (identificador de pago) del suscriptor a la URL que se específica en el parámetro cancel_url vía HTTP POST. Ambos parámetros, id y cancel_url, los envía Banwire en la notificación  de pago recurrente recibido.
+
 ## Ejemplos en vivo
 [Ir a la página de ejemplos en vivo](https://test.banwire.com/sw/examples)
