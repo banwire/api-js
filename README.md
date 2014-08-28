@@ -80,7 +80,7 @@ data-cust-represented="true"
 Se pueden crear suscripciones a pagos recurrentes donde al cliente se le puede efecturar un número determinados de pagos fijos durante un periodo determinado de tiempo. Se deben agregar las siguientes variables:
 ```html
 data-recurring="true"
-data-recurring-inteval="month"
+data-recurring-interval="month"
 data-recurring-limit="10"
 data-recurring-start="2014-08-21"
 data-recurring-total="100"
