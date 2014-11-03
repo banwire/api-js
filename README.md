@@ -11,13 +11,18 @@ Para integrar utilizando sólo HTML, utiliza el siguiente formato:
     type="text/javascript"
     src="https://test.banwire.com/sw/checkout.js"
     data-sandbox="true"
-    data-user="userdemo"
+    data-user="pruebasbw"
     data-total="500.00"
+    data-cust-fname="Ricardo"
+    data-cust-mname="Gamba"
+    data-cust-lname="Lavin"
+    data-cust-email="prueba@banwire.com"
     data-success-page="http://google.com"
     data-error-page="http://facebook.com"
     data-pending-page="http://yahoo.com"
     data-concept="Concepto de pago"
     data-reference="Referencia de pago"
+    data-notify-url="https://test.banwire.com/sw/examples/response.php"
     data-button-caption="Pagar ahora"
     data-button-class="btn-pay">
 </script>
@@ -29,7 +34,7 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     type="text/javascript"
     src="https://test.banwire.com/sw/checkout.js"
     data-sandbox="true"
-    data-user="userdemo"
+    data-user="pruebasbw"
     data-title="Mi Comercio"
     data-total="500.00"
     data-payment-options="visa,amex"
@@ -47,7 +52,7 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     data-cust-fname="Ricardo"
     data-cust-mname="Gamba"
     data-cust-lname="Lavin"
-    data-cust-email="rgamba@gmail.com"
+    data-cust-email="prueba@banwire.com"
     data-cust-phone="55555555"
     data-cust-addr="Circuito fuentes del pedregal 440 10"
     data-cust-zip="14140"
@@ -104,7 +109,7 @@ var SW = new BwGateway({
         // Quitar o establecer a false cuando pase a produccion
         sandbox: true,
         // Nombre de usuario de Banwire
-        user: 'userdemo',
+        user: 'pruebasbw',
         // Titulo de la entana
         title: "Mi Comercio",
         // Referencia
@@ -132,9 +137,9 @@ var SW = new BwGateway({
                 unitPrice: 40
             },
             {
-                name: "Otro articulo con nombre mas largo quien sabe que mas poner",
+                name: "Otro articulo con nombre mas largo",
                 qty: 2,
-                desc: "Articulo numero tres de prueba con una descripcion bien larga",
+                desc: "Articulo numero tres de prueba con una descripcion larga",
                 unitPrice: 40
             }
         ],
@@ -142,8 +147,8 @@ var SW = new BwGateway({
             fname: "Ricardo",
             mname: "Gamba",
             lname: "Lavin",
-            email: "rgamba@banwire.com",
-            phone: "56457845",
+            email: "prueba@banwire.com",
+            phone: "55555555",
             addr: "Direccion 440",
             city: "Mexico",
             state: "Di",
@@ -278,3 +283,10 @@ Para cancelar una suscripción de pago recurrente se debe envíar vía HTTP POST
 
 ## Ejemplos en vivo
 [Ir a la página de ejemplos en vivo](https://test.banwire.com/sw_ex)
+
+## Tarjeta de pruebas
+Número de Tarjeta: 5134422031476272
+Tipo de tarjeta: MasterCard
+Fecha de expiración: 12/19
+Código de seguridad: 162
+
