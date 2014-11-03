@@ -285,7 +285,9 @@ Para cancelar una suscripción de pago recurrente se debe envíar vía HTTP POST
 [Ir a la página de ejemplos en vivo](https://test.banwire.com/sw_ex)
 
 ## Tarjeta de pruebas
+
 Número de Tarjeta | 5134422031476272
+--- | --- 
 Tipo de tarjeta | MasterCard
 Fecha de expiración | 12/19
 Código de seguridad | 162
