@@ -243,7 +243,7 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
 hash | sha1 | Hash de seguridad*
 
-### Challenge
+### Challenge ***
 Cada vez que un pago se envía a revisión, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables: 
 
 Variable | Valor | Descripción
@@ -257,7 +257,7 @@ hash | sha1 | Hash de seguridad*
 
 ## Notificaciones OXXO
 
-### Pago pendiente
+### Pago pendiente ***
 Cada vez que se realize una solicitud de pago en OXXO, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
@@ -284,7 +284,7 @@ total | Decimal | Total pagado
 
 ## Notificaciones SPEIFAST
 
-### Pendiente
+### Pendiente ***
 Cada vez que se realize una solicitud de pago en SPEIFAST, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
@@ -356,3 +356,4 @@ Tipo de tarjeta | MasterCard
 Fecha de expiración | 12/19
 Código de seguridad | 162
 
+*** Esta disponible solo para algunos usuarios
