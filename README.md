@@ -250,7 +250,6 @@ Variable | Valor | Descripción
 --- | --- | --- 
 event | card | Tipo de evento de la notificación
 status | challenge | Estatus de la transacción
-auth_code | Alfanumérico | Código unico de autorización de la transacción
 reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
 id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
@@ -259,7 +258,7 @@ hash | sha1 | Hash de seguridad*
 ## Notificaciónes OXXO
 
 ### Pago pendiente
-Cada vez que se realize una solicitud de pago vía OXXO, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+Cada vez que se realize una solicitud de pago en OXXO, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
 --- | --- | --- 
@@ -286,7 +285,7 @@ total | Decimal | Total pagado
 ## Notificaciónes SPEIFAST
 
 ### Pendiente
-Cada vez que se realize una solicitud de pago vía SPEIFAST, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+Cada vez que se realize una solicitud de pago en SPEIFAST, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
 --- | --- | --- 
