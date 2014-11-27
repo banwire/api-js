@@ -228,7 +228,7 @@ Se puede invocar el pago desde cualquier botón de pago:
 # Respuestas y notificaciones
 El sistema emitirá una serie de notificaciones en diferentes eventos del proceso que se detallarán a continuación.
 
-## Notificaciónes con tarjeta
+## Notificaciones con tarjeta
 
 ### Pago exitoso
 Cada vez que se efectúa un pago exitoso, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
@@ -255,7 +255,7 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
 hash | sha1 | Hash de seguridad*
 
-## Notificaciónes OXXO
+## Notificaciones OXXO
 
 ### Pago pendiente
 Cada vez que se realize una solicitud de pago en OXXO, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
@@ -282,7 +282,7 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 hash | sha1 | Hash de seguridad*
 total | Decimal | Total pagado
 
-## Notificaciónes SPEIFAST
+## Notificaciones SPEIFAST
 
 ### Pendiente
 Cada vez que se realize una solicitud de pago en SPEIFAST, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
@@ -325,7 +325,7 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 hash | sha1 | Hash de seguridad*
 total | Decimal | Total pagado
 
-## Notificaciónes de pago recurrente con tarjeta
+## Notificaciones de pago recurrente con tarjeta
 
 ### Pago exitoso
 Cada vez que se efectúa un pago recurrente exitoso, Banwire enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
