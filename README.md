@@ -228,19 +228,35 @@ Se puede invocar el pago desde cualquier botón de pago:
 # Respuestas y notificaciones
 El sistema emitirá una serie de notificaciones en diferentes eventos del proceso que se detallarán a continuación.
 
-## Notificación de pago recibido con tarjeta
-Cada vez que se efectúa un pago exitoso, Banwire enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+## Notificaciónes con tarjeta
+
+### Pago exitoso
+Cada vez que se efectúa un pago exitoso, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
 --- | --- | --- 
 event | card | Tipo de evento de la notificación
+status | paid | Estatus de la transacción
 auth_code | Alfanumérico | Código unico de autorización de la transacción
 reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
 id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
 hash | sha1 | Hash de seguridad*
 
-## Notificaciónes  OXXO
+### Challenge
+Cada vez que un pago se envía a revisión, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables: 
+
+Variable | Valor | Descripción
+--- | --- | --- 
+event | card | Tipo de evento de la notificación
+status | challenge | Estatus de la transacción
+auth_code | Alfanumérico | Código unico de autorización de la transacción
+reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
+id | Alfanumérico | Identificador de pago dentro de Banwire
+total | Decimal | Total pagado
+hash | sha1 | Hash de seguridad*
+
+## Notificaciónes OXXO
 
 ### Pago pendiente
 Cada vez que se realize una solicitud de pago vía OXXO, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
@@ -254,7 +270,7 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 hash | sha1 | Hash de seguridad*
 total | Decimal | Total pagado
 
-### Pago recibido exitosamente
+### Pago exitoso
 Cada vez que se recibe un pago vía OXXO, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
@@ -267,30 +283,64 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 hash | sha1 | Hash de seguridad*
 total | Decimal | Total pagado
 
-## Notificación de pago recibido via SPEIFAST
-Cada vez que se recibe un pago vía SPEIFAST, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+## Notificaciónes SPEIFAST
+
+### Pendiente
+Cada vez que se realize una solicitud de pago vía SPEIFAST, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
 --- | --- | --- 
 event | speifast | Tipo de evento de la notificación
+status | pending | Estatus de la transacción
+type | send | Tipo de movimiento de la transacción
+reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
+id | Alfanumérico | Identificador de pago dentro de Banwire
+hash | sha1 | Hash de seguridad*
+total | Decimal | Total pagado
+
+### Abono
+Cada vez que se recibe un pago parcial vía SPEIFAST y no se cubre el monto total, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+
+Variable | Valor | Descripción
+--- | --- | --- 
+event | speifast | Tipo de evento de la notificación
+status | pending | Estatus de la transacción
+type | parcial_payment | Tipo de movimiento de la transacción
 auth_code | Alfanumérico | Código de rastreo del SPEI
 reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
 id | Alfanumérico | Identificador de pago dentro de Banwire
-total | Decimal | Total pagado
 hash | sha1 | Hash de seguridad*
+total | Decimal | Total pagado
 
-## Notificación de pago recurrente recibido
+### Pago exitoso
+Cada vez que se recibe un pago vía SPEIFAST y si se cubre el monto total, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+
+Variable | Valor | Descripción
+--- | --- | --- 
+event | speifast | Tipo de evento de la notificación
+status | paid | Estatus de la transacción
+type | completed | Tipo de movimiento de la transacción
+auth_code | Alfanumérico | Código de rastreo del SPEI
+reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
+id | Alfanumérico | Identificador de pago dentro de Banwire
+hash | sha1 | Hash de seguridad*
+total | Decimal | Total pagado
+
+## Notificaciónes de pago recurrente con tarjeta
+
+### Pago exitoso
 Cada vez que se efectúa un pago recurrente exitoso, Banwire enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
 
 Variable | Valor | Descripción
 --- | --- | --- 
 event | recurring | Tipo de evento de la notificación
+status | paid | Estatus de la transacción
 auth_code | Alfanumérico | Código unico de autorización de la transacción
 reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
 id | Alfanumérico | Identificador de pago dentro de Banwire
+hash | sha1 | Hash de seguridad*
 total | Decimal | Total pagado
 token | Alfanumérico | Token identificador de la suscripcion
-hash | sha1 | Hash de seguridad*
 cancel_url | URL | URL para cancelar la suscripción
 
 ## Cancelar suscripción de pago recurrente
