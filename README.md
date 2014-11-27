@@ -356,4 +356,4 @@ Tipo de tarjeta | MasterCard
 Fecha de expiración | 12/19
 Código de seguridad | 162
 
-*** Esta disponible solo para algunos usuarios
+*** Está disponible solo para algunos usuarios
