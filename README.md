@@ -9,7 +9,7 @@ Para integrar utilizando sólo HTML, utiliza el siguiente formato:
 ```html
 <script
     type="text/javascript"
-    src="https://test.banwire.com/sw/checkout.js"
+    src="https://sw.banwire.com/checkout.js"
     data-sandbox="true"
     data-user="pruebasbw"
     data-total="500.00"
@@ -32,7 +32,7 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
 ```html
 <script
     type="text/javascript"
-    src="https://test.banwire.com/sw/checkout.js"
+    src="https://sw.banwire.com/checkout.js"
     data-sandbox="true"
     data-user="pruebasbw"
     data-title="Mi Comercio"
@@ -100,7 +100,7 @@ En caso de no establecer la variable data-recurring-total, el monto de cada pago
 Es posible realizar una integración más personalizable utilizando Javascript directamente.
 Para hacerlo pimero se debe incluir el archivo JS en HEAD o BODY de la página:
 ```html
-<script type="text/javascript" src="https://test.banwire.com/sw/checkout.js"></script>
+<script type="text/javascript" src="https://sw.banwire.com/checkout.js"></script>
 ```
 
 Y utilizar el siguente formato para iniciar el servicio:
