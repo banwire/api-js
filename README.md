@@ -342,6 +342,20 @@ total | Decimal | Total pagado
 token | Alfanumérico | Token identificador de la suscripcion
 cancel_url | URL | URL para cancelar la suscripción
 
+### Pago declinado
+Cada vez que se efectúa un pago recurrente declinado, Banwire enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+
+Variable | Valor | Descripción
+--- | --- | --- 
+event | recurring | Tipo de evento de la notificación
+status | denied | Estatus de la transacción
+reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
+id | Alfanumérico | Identificador de pago dentro de Banwire
+hash | sha1 | Hash de seguridad*
+total | Decimal | Total pagado
+token | Alfanumérico | Token identificador de la suscripcion
+cancel_url | URL | URL para cancelar la suscripción
+
 ## Cancelar suscripción de pago recurrente
 Para cancelar una suscripción de pago recurrente se debe solicitar directamente al contacto soporte@banwire.com, dado que el servicio de cancelación está en mantenimiento.
 
