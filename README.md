@@ -58,7 +58,7 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     data-cust-zip="14140"
     data-cust-city="Mexico"
     data-cust-country="MEX"
-    data-cust-state="Di"
+    data-cust-state="DF"
     data-ship-addr="Direccion de envio"
     data-ship-zip="13145"
     data-ship-city="Mexico"
@@ -151,14 +151,14 @@ var SW = new BwGateway({
             phone: "55555555",
             addr: "Direccion 440",
             city: "Mexico",
-            state: "Di",
+            state: "DF",
             country: "MEX",
             zip: "14145"
         },
         ship: {
             addr: "Direccion 440",
             city: "Mexico",
-            state: "Di",
+            state: "DF",
             country: "MEX",
             zip: "14145"
         },
