@@ -10,20 +10,20 @@ Para integrar utilizando sólo HTML, utiliza el siguiente formato:
 <script
     type="text/javascript"
     src="https://sw.banwire.com/checkout.js"
-    data-sandbox="true"
-    data-user="pruebasbw"
-    data-total="500.00"
-    data-cust-fname="Ricardo"
-    data-cust-mname="Gamba"
-    data-cust-lname="Lavin"
-    data-cust-email="prueba@banwire.com"
-    data-success-page="http://google.com"
-    data-error-page="http://facebook.com"
-    data-pending-page="http://yahoo.com"
-    data-concept="Concepto de pago"
-    data-reference="Referencia de pago"
-    data-notify-url="https://test.banwire.com/sw/examples/response.php"
-    data-button-caption="Pagar ahora"
+    data-sandbox="true" //Activar ambiente de pruebas
+    data-user="pruebasbw" //Usuario de pruebas
+    data-total="500.00" //Monto
+    data-cust-fname="Ricardo" //Nombre del comprador
+    data-cust-mname="Gamba" //Apellido paterno del comprador
+    data-cust-lname="Lavin" //Apellido materno del comprador
+    data-cust-email="prueba@banwire.com" //Email del comprador
+    data-success-page="http://google.com" //Página de pago exitoso del comercio
+    data-error-page="http://facebook.com" //Página de error del comercio
+    data-pending-page="http://yahoo.com" //Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
+    data-concept="Concepto de pago" //Concepto de pago
+    data-reference="Referencia de pago" //ID de pedido del comercio
+    data-notify-url="https://test.banwire.com/sw/examples/response.php" //URL del comercio donde BanWire notifica los pagos exitosos
+    data-button-caption="Pagar ahora" 
     data-button-class="btn-pay">
 </script>
 ```
@@ -33,45 +33,44 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
 <script
     type="text/javascript"
     src="https://sw.banwire.com/checkout.js"
-    data-sandbox="true"
-    data-user="pruebasbw"
-    data-title="Mi Comercio"
-    data-total="500.00"
-    data-payment-options="visa,amex"
-    data-review-order="true"
-    data-sandbox="true"
+    data-sandbox="true" //Activar ambiente de pruebas
+    data-user="pruebasbw" //Usuario de pruebas
+    data-title="Mi Comercio" //Nombre del comercio
+    data-total="500.00" //Monto
+    data-payment-options="visa,amex" //Opciones de pago (all:todas, visa, amex, oxxo, spei)
+    data-review-order="true" //Activar resumen de compra
     data-loading-text="Espere..."
-    data-success-page="https://test.banwire.com/sw/examples"
-    data-notify-url="https://test.banwire.com/sw/examples/response.php"
-    data-error-page="http://facebook.com"
-    data-pending-page="http://yahoo.com"
-    data-concept="Concepto de pago"
-    data-reference="Referencia de pago"
-    data-months="3,6"
-    data-currency="MXN"
-    data-cust-fname="Ricardo"
-    data-cust-mname="Gamba"
-    data-cust-lname="Lavin"
-    data-cust-email="prueba@banwire.com"
-    data-cust-phone="55555555"
-    data-cust-addr="Circuito fuentes del pedregal 440 10"
-    data-cust-zip="14140"
-    data-cust-city="Mexico"
-    data-cust-country="MEX"
-    data-cust-state="DF"
-    data-ship-addr="Direccion de envio"
-    data-ship-zip="13145"
-    data-ship-city="Mexico"
-    data-ship-country="MX"
-    data-ship-state="DF"
-    data-button-caption="Pagar ahora"
+    data-success-page="https://test.banwire.com/sw/examples" //Página de pago exitoso del comercio
+    data-notify-url="https://test.banwire.com/sw/examples/response.php" //URL del comercio donde BanWire notifica los pagos exitosos
+    data-error-page="http://facebook.com"  //Página de error del comercio
+    data-pending-page="http://yahoo.com" //Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
+    data-concept="Concepto de pago" //Concepto de pago
+    data-reference="Referencia de pago" //ID de pedido del comercio
+    data-months="3,6" //Pago a meses (disponible para amex)
+    data-currency="MXN" //Moneda: peso mexicano
+    data-cust-fname="Ricardo" //Nombre del comprador
+    data-cust-mname="Gamba" //Apellido paterno del comprador
+    data-cust-lname="Lavin" //Apellido materno del comprador
+    data-cust-email="prueba@banwire.com" //Email del comprador
+    data-cust-phone="55555555" //Número telefónico del comprador (10 dígitos)
+    data-cust-addr="Circuito fuentes del pedregal 440 10" //Dirección del comprador
+    data-cust-zip="14140" //Código postal del comprador
+    data-cust-city="Mexico" //Ciudad del comprador
+    data-cust-country="MEX" //País del comprador (3 dígitos de acuerdo al formato ISO)
+    data-cust-state="DF"  //Estado del comprador (2 dígitos de acuerdo al formato ISO)
+    data-ship-addr="Direccion de envio" //Dirección de envío
+    data-ship-zip="13145" //Código postal de la dirección de envío
+    data-ship-city="Mexico" //Ciudad de envío
+    data-ship-country="MX" //País de envío (3 dígitos de acuerdo al formato ISO)
+    data-ship-state="DF" //Estado de envío (2 dígitos de acuerdo al formato ISO)
+    data-button-caption="Pagar ahora" 
     data-button-class="btn-pay"
-    data-item-1-name="Primero"
-    data-item-1-price="100.00"
-    data-item-1-qty="2"
-    data-item-2-name="Segundo"
-    data-item-2-price="100.00"
-    data-item-2-qty="3">
+    data-item-1-name="Primero" //Nombre del producto uno
+    data-item-1-price="100.00" //Precio del producto uno
+    data-item-1-qty="2" //Cantidad de producto (s) uno
+    data-item-2-name="Segundo" //Nombre del producto dos
+    data-item-2-price="100.00" //Precio del producto dos
+    data-item-2-qty="3"> //Cantidad de producto (s) dos
 </script>
 ```
 
@@ -144,23 +143,23 @@ var SW = new BwGateway({
             }
         ],
         cust: {
-            fname: "Ricardo",
-            mname: "Gamba",
-            lname: "Lavin",
-            email: "prueba@banwire.com",
-            phone: "55555555",
-            addr: "Direccion 440",
-            city: "Mexico",
-            state: "DF",
-            country: "MEX",
-            zip: "14145"
+            fname: "Ricardo", //Nombre del comprador
+            mname: "Gamba", //Apellido paterno del comprador
+            lname: "Lavin", //Apeliido materno del comprador
+            email: "prueba@banwire.com", //Email del comprador
+            phone: "55555555", //Número telefónico del comprador
+            addr: "Direccion 440", //Dirección del comprador (calle y número)
+            city: "Mexico", //Ciudad del comprador
+            state: "DF", //Estado del comprador (2 dígitos de acuerdo al formato ISO)
+            country: "MEX", //País del comprador (3 dígitos de acuerdo al formato ISO)
+            zip: "14145" //Código de postal del comprador
         },
         ship: {
-            addr: "Direccion 440",
-            city: "Mexico",
-            state: "DF",
-            country: "MEX",
-            zip: "14145"
+            addr: "Direccion 440", //Dirección de envío
+            city: "Mexico", //Ciudad de envío
+            state: "DF", //Estado de envío (2 dígitos de acuerdo al formato ISO)
+            country: "MEX", //País de envío (3 dígitos de acuerdo al formato ISO)
+            zip: "14145" //Código de postal del envío
         },
         // Opciones de pago, por defecto es "all". Puede incluir varias opciones separadas por comas
         paymentOptions: 'all', // visa,mastercard,amex,oxxo,speifast,all
