@@ -241,6 +241,17 @@ reference | El enviado inicialmente | La referencia de pago enviada inicialmente
 id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
 hash | sha1 | Hash de seguridad*
+plan | Arreglo | Conjunto de variables ****
+plan[type] | Alfanumérico | Tipo de plan ****
+plan[no_payments] | Alfanumérico | Número de pagos (Ejemplo: en caso de tipo 'no_interest', 6 = 6 Meses) ****
+
+**** La variable sera agregada dentro la notificación solo en caso que se haya seleccionado un plan de pagos (pagos a meses). 
+
+#### Tipos de planes
+
+Tipo | Descripción
+--- | --- 
+no_interest | Meses sin intereses
 
 ### Challenge ***
 Cada vez que un pago se envía a revisión, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables: 
@@ -253,6 +264,9 @@ reference | El enviado inicialmente | La referencia de pago enviada inicialmente
 id | Alfanumérico | Identificador de pago dentro de Banwire
 total | Decimal | Total pagado
 hash | sha1 | Hash de seguridad*
+plan | Arreglo | Conjunto de variables ****
+plan[type] | Alfanumérico | Tipo de plan [no_interest] ****
+plan[no_payments] | Alfanumérico | Número de pagos (Ejemplo: en caso de tipo 'no_interest', 6 = 6 Meses) ****
 
 ## Notificaciones OXXO
 
