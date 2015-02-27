@@ -48,6 +48,7 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     data-reference="Referencia de pago" //ID de pedido del comercio
     data-months="3,6" //Pago a meses (disponible para amex)
     data-currency="MXN" //Moneda: peso mexicano
+    data-exchange-rate="" //Tipo de cambio definido por el comercio (En caso de seleccionar una moneda que requiera mostrar el tipo de cambio a MXN. Solo informativo). Ejemplo: 15.00
     data-cust-fname="Ricardo" //Nombre del comprador
     data-cust-mname="Gamba" //Apellido paterno del comprador
     data-cust-lname="Lavin" //Apellido materno del comprador
@@ -117,6 +118,8 @@ var SW = new BwGateway({
         concept: 'pago de prueba',
         // Opcional: Moneda
         currency: 'MXN',
+        // Opcional: Tipo de cambio definido por el comercio (En caso de seleccionar una moneda que requiera mostrar el tipo de cambio a MXN. Solo informativo). Ejemplo: 15.00
+        exchangeRate: '',
         // Total de la compra
         total: "100.00",
         // Opcional: Meses sin intereses
@@ -223,6 +226,13 @@ Se puede invocar el pago desde cualquier botón de pago:
 ```html
 <a href="#" onclick="pagar();" class="btn-pay">Pagar</a>
 ```
+
+#### Moneda: Valor y Descripción (currency)
+
+Valor | Descripción
+--- | --- 
+MXN | Peso mexicano (Default)
+USD | Dólar americano (Sólo de carácter informativo. El total a pagar sera mostrado en Pesos mexicanos [MXN])
 
 # Respuestas y notificaciones
 El sistema emitirá una serie de notificaciones en diferentes eventos del proceso que se detallarán a continuación.
