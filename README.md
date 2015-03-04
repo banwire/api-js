@@ -233,6 +233,7 @@ Valor | Descripción
 --- | --- 
 MXN | Peso mexicano (Default)
 USD | Dólar americano (Sólo de carácter informativo. El total a pagar sera mostrado en Pesos mexicanos [MXN])
+EUR | Euro (Sólo de carácter informativo. El total a pagar sera mostrado en Pesos mexicanos [MXN])
 
 # Respuestas y notificaciones
 El sistema emitirá una serie de notificaciones en diferentes eventos del proceso que se detallarán a continuación.
