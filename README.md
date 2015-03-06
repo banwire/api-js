@@ -74,6 +74,20 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     data-item-2-qty="3"> //Cantidad de producto (s) dos
 </script>
 ```
+### Descripción de parámetros
+Parámetro | Descripción
+--- | ---
+data-sandbox | TRUE / FALSE Activar ambiente de pruebas
+data-user | Nombre de usuario
+data-title | Nombre del comercio
+data-total | Monto a pagar
+data-payment-options | Opciones de pago (all:todas, visa, amex, oxxo, spei)
+data-review-order | TRUE / FALSE Activar resumen de compra
+data-success-page | Página informativa de pago exitoso del comercio
+data-error-page | Página de error del comercio
+data-pending-page | Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
+data-notify-url | URL del comercio donde BanWire notifica los pagos exitoso
+
 
 ### Integración para pagos con tarjeta-habientes representados 
 Para pagos en donde el tarjetahabiente es representado por un tercero en posesión de los datos e información confidencial del tarjeta-habiente, se debe agregar el siguiente parámetro.
