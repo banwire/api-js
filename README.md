@@ -416,10 +416,10 @@ total | Decimal | Total pagado
 token | Alfanumérico | Token identificador de la suscripcion
 cancel_url | URL | URL para cancelar la suscripción
 
+ *** Por el momento está disponible solo para algunos usuarios.
+
 ## Cancelar suscripción de pago recurrente
 Para cancelar una suscripción de pago recurrente se debe solicitar directamente al contacto soporte@banwire.com, dado que el servicio de cancelación está en mantenimiento.
-
-## *** Por el momento está disponible solo para algunos usuarios.
 
 ## Pruebas de Secure Window
 Para realizar pruebas con Secure Window se debe activar el ambiente de sandbox y utilizar el usuario de pruebas pruebasbw, es posible simular el pago exitoso con la tarjeta de pruebas.
@@ -427,6 +427,7 @@ Para realizar pruebas con Secure Window se debe activar el ambiente de sandbox y
 ### Tarjeta de pruebas
 Dato | Valor
 --- | ---
+Nombre tarjetahabiente | Pruebasbw 
 Número de Tarjeta | 5134422031476272
 Tipo de tarjeta | MasterCard
 Fecha de expiración | 12/19
