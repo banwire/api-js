@@ -419,15 +419,22 @@ cancel_url | URL | URL para cancelar la suscripción
 ## Cancelar suscripción de pago recurrente
 Para cancelar una suscripción de pago recurrente se debe solicitar directamente al contacto soporte@banwire.com, dado que el servicio de cancelación está en mantenimiento.
 
-## Ejemplos en vivo
-[Ir a la página de ejemplos en vivo](https://test.banwire.com/sw_ex)
+## *** Por el momento está disponible solo para algunos usuarios.
 
-## Tarjeta de pruebas
-El usuario de pruebas es pruebasbw
+## Pruebas de Secure Window
+Para realizar pruebas con Secure Window se debe activar el ambiente de sandbox y utilizar el usuario de pruebas pruebasbw, es posible simular el pago exitoso con la tarjeta de pruebas.
+
+### Tarjeta de pruebas
+Dato | Valor
+--- | ---
 Número de Tarjeta | 5134422031476272
---- | --- 
 Tipo de tarjeta | MasterCard
 Fecha de expiración | 12/19
 Código de seguridad | 162
 
-*** Por el momento está disponible solo para algunos usuarios.
+## Ejemplos en vivo
+[Ir a la página de ejemplos en vivo](https://test.banwire.com/sw_ex)
+
+## De sandbox a producción 
+Para pasar a producción el proceso es el siguiente, el representante de la cuenta debe enviar un correo a contratos@banwire.com solicitando su pase a modo de producción, de éste correo se les indicará las instrucciones a realizar en la integración para configurarla para modo de producción.
+
