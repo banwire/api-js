@@ -10,19 +10,19 @@ Para integrar utilizando sólo HTML, utiliza el siguiente formato:
 <script
     type="text/javascript"
     src="https://sw.banwire.com/checkout.js"
-    data-sandbox="true" //Activar ambiente de pruebas
-    data-user="pruebasbw" //Usuario de pruebas
-    data-total="500.00" //Monto
-    data-cust-fname="Ricardo" //Nombre del comprador
-    data-cust-mname="Gamba" //Apellido paterno del comprador
-    data-cust-lname="Lavin" //Apellido materno del comprador
-    data-cust-email="prueba@banwire.com" //Email del comprador
-    data-success-page="http://google.com" //Página de pago exitoso del comercio
-    data-error-page="http://facebook.com" //Página de error del comercio
-    data-pending-page="http://yahoo.com" //Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
-    data-concept="Concepto de pago" //Concepto de pago
-    data-reference="Referencia de pago" //ID de pedido del comercio
-    data-notify-url="https://test.banwire.com/sw/examples/response.php" //URL del comercio donde BanWire notifica los pagos exitosos
+    data-sandbox="true" 
+    data-user="pruebasbw" 
+    data-total="500.00" 
+    data-cust-fname="Ricardo" 
+    data-cust-mname="Gamba" 
+    data-cust-lname="Lavin" 
+    data-cust-email="prueba@banwire.com" 
+    data-success-page="http://google.com" 
+    data-error-page="http://facebook.com" 
+    data-pending-page="http://yahoo.com" 
+    data-concept="Concepto de pago" 
+    data-reference="Referencia de pago" 
+    data-notify-url="https://test.banwire.com/sw/examples/response.php" 
     data-button-caption="Pagar ahora" 
     data-button-class="btn-pay">
 </script>
@@ -33,45 +33,45 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
 <script
     type="text/javascript"
     src="https://sw.banwire.com/checkout.js"
-    data-sandbox="true" //Activar ambiente de pruebas
-    data-user="pruebasbw" //Usuario de pruebas
-    data-title="Mi Comercio" //Nombre del comercio
-    data-total="500.00" //Monto
-    data-payment-options="visa,amex" //Opciones de pago (all:todas, visa, amex, oxxo, spei)
-    data-review-order="true" //Activar resumen de compra
+    data-sandbox="true" 
+    data-user="pruebasbw" 
+    data-title="Mi Comercio" 
+    data-total="500.00" 
+    data-payment-options="visa,amex" 
+    data-review-order="true" 
     data-loading-text="Espere..."
-    data-success-page="https://test.banwire.com/sw/examples" //Página de pago exitoso del comercio
-    data-notify-url="https://test.banwire.com/sw/examples/response.php" //URL del comercio donde BanWire notifica los pagos exitosos
-    data-error-page="http://facebook.com"  //Página de error del comercio
-    data-pending-page="http://yahoo.com" //Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
-    data-concept="Concepto de pago" //Concepto de pago
-    data-reference="Referencia de pago" //ID de pedido del comercio
-    data-months="3,6" //Pago a meses (disponible para amex)
-    data-currency="MXN" //Moneda: peso mexicano
-    data-exchange-rate="" //Tipo de cambio definido por el comercio (En caso de seleccionar una moneda que requiera mostrar el tipo de cambio a MXN. Solo informativo). Ejemplo: 15.00
-    data-cust-fname="Ricardo" //Nombre del comprador
-    data-cust-mname="Gamba" //Apellido paterno del comprador
-    data-cust-lname="Lavin" //Apellido materno del comprador
-    data-cust-email="prueba@banwire.com" //Email del comprador
-    data-cust-phone="55555555" //Número telefónico del comprador (10 dígitos)
-    data-cust-addr="Circuito fuentes del pedregal 440 10" //Dirección del comprador
-    data-cust-zip="14140" //Código postal del comprador
-    data-cust-city="Mexico" //Ciudad del comprador
-    data-cust-country="MEX" //País del comprador (3 dígitos de acuerdo al formato ISO)
-    data-cust-state="DF"  //Estado del comprador (2 dígitos de acuerdo al formato ISO)
-    data-ship-addr="Direccion de envio" //Dirección de envío
-    data-ship-zip="13145" //Código postal de la dirección de envío
-    data-ship-city="Mexico" //Ciudad de envío
-    data-ship-country="MX" //País de envío (3 dígitos de acuerdo al formato ISO)
-    data-ship-state="DF" //Estado de envío (2 dígitos de acuerdo al formato ISO)
+    data-success-page="https://test.banwire.com/sw/examples" 
+    data-notify-url="https://test.banwire.com/sw/examples/response.php" 
+    data-error-page="http://facebook.com"  
+    data-pending-page="http://yahoo.com" 
+    data-concept="Concepto de pago" 
+    data-reference="Referencia de pago" 
+    data-months="3,6,9,12" 
+    data-currency="MXN" 
+    data-exchange-rate="" 
+    data-cust-fname="Ricardo" 
+    data-cust-mname="Gamba" 
+    data-cust-lname="Lavin" 
+    data-cust-email="prueba@banwire.com" 
+    data-cust-phone="55555555" 
+    data-cust-addr="Circuito fuentes del pedregal 440 10" 
+    data-cust-zip="14140" 
+    data-cust-city="Mexico" 
+    data-cust-country="MEX" 
+    data-cust-state="DF"  
+    data-ship-addr="Direccion de envio" 
+    data-ship-zip="13145" 
+    data-ship-city="Mexico" 
+    data-ship-country="MX" 
+    data-ship-state="DF" 
     data-button-caption="Pagar ahora" 
     data-button-class="btn-pay"
-    data-item-1-name="Primero" //Nombre del producto uno
-    data-item-1-price="100.00" //Precio del producto uno
-    data-item-1-qty="2" //Cantidad de producto (s) uno
-    data-item-2-name="Segundo" //Nombre del producto dos
-    data-item-2-price="100.00" //Precio del producto dos
-    data-item-2-qty="3"> //Cantidad de producto (s) dos
+    data-item-1-name="Primero" 
+    data-item-1-price="100.00" 
+    data-item-1-qty="2" 
+    data-item-2-name="Segundo" 
+    data-item-2-price="100.00" 
+    data-item-2-qty="3"> /
 </script>
 ```
 ### Descripción de parámetros
@@ -87,7 +87,29 @@ data-success-page | Página informativa de pago exitoso del comercio
 data-error-page | Página de error del comercio
 data-pending-page | Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
 data-notify-url | URL del comercio donde BanWire notifica los pagos exitoso
-
+data-concept | Concepto de pago
+data-reference | ID de pedido del comercio
+data-months | "3,6,9,12" Pago a meses 
+data-currency | Moneda: peso mexicano
+data-exchange-rate | Tipo de cambio definido por el comercio (En caso de seleccionar una moneda que requiera mostrar el tipo de cambio a MXN. Solo informativo). Ejemplo: 15.00
+data-cust-fname | Nombre del comprador
+data-cust-mname | Apellido paterno del comprador
+data-cust-lname | Apellido materno del comprador
+data-cust-email | Email del comprador
+data-cust-phone | Número telefónico del comprador (10 dígitos)
+data-cust-addr | Dirección del comprador
+data-cust-zip | Código postal del comprador
+data-cust-city | Ciudad del comprador
+data-cust-country | País del comprador (3 dígitos de acuerdo al formato ISO)
+data-cust-state | Estado del comprador (2 dígitos de acuerdo al formato ISO)
+data-ship-addr | Dirección de envío
+data-ship-zip | Código postal de la dirección de envío
+data-ship-city | Ciudad de envío
+data-ship-country | País de envío (3 dígitos de acuerdo al formato ISO)
+data-ship-state | Estado de envío (2 dígitos de acuerdo al formato ISO)
+data-item-1-name | Nombre del producto uno
+data-item-1-price | Precio del producto uno
+data-item-1-qty | Cantidad de producto (s) uno
 
 ### Integración para pagos con tarjeta-habientes representados 
 Para pagos en donde el tarjetahabiente es representado por un tercero en posesión de los datos e información confidencial del tarjeta-habiente, se debe agregar el siguiente parámetro.
@@ -137,7 +159,7 @@ var SW = new BwGateway({
         // Total de la compra
         total: "100.00",
         // Opcional: Meses sin intereses
-        months: [3,6],
+        months: [3,6,9,12],
         // Arreglo con los items de compra
         items: [
             {
