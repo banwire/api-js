@@ -351,7 +351,7 @@ Variable | Valor | Descripción
 --- | --- | --- 
 event | speifast | Tipo de evento de la notificación
 status | pending | Estatus de la transacción
-type | send | Tipo de movimiento de la transacción
+type | sent | Tipo de movimiento de la transacción
 reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
 id | Alfanumérico | Identificador de pago dentro de Banwire
 hash | sha1 | Hash de seguridad*
