@@ -440,7 +440,7 @@ Código de seguridad | 162
 Para pasar a producción el proceso es el siguiente, el representante de la cuenta debe enviar un correo a soporte@banwire.com solicitando su pase a modo de producción, de éste correo se les indicará las instrucciones a realizar en la integración para configurarla para modo de producción.
 
 ### Hash de Seguridad
-El parámetro 'hash'es un valor cifrado con el algoritmo SHA256 mediante una clave específica (API-SECRET) usando el método HMAC. Este parámetro se utilizará para poder verificar que el emisor de la notificación recibida está autorizado por el receptor, éste último deberá validar el parámetro Hash, asegurándose que el valor cifrado coincida con el que él calcula.
+El parámetro 'hash' es un valor cifrado con el algoritmo SHA256 mediante una clave específica (API-SECRET) usando el método HMAC. Este parámetro se utilizará para poder verificar que el emisor de la notificación recibida está autorizado por el receptor, éste último deberá validar el parámetro Hash, asegurándose que el valor cifrado coincida con el que él calcula.
 
 Todas las Respuestas y Notificaciones que son enviadas desde BanWire en los diferentes eventos del proceso de Secure Window incluyen el parámetro 'hash'.
 
