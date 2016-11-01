@@ -449,6 +449,7 @@ API-SECRET es un valor único que se genera de forma aleatoria para cada cuenta 
 ## ¿Cómo se calcula el valor del parámetro 'hash'?
 El parámetro 'hash' es el valor cifrado del parámetro 'id'(Identificador único de la transacción), el cual se incluye dentro de la notificación vía POST que envía BanWire a la URL del parámetro 'notifyUrl' en la integración.
 Ejemplo:
+
 Valor del parámetro id | API SECRET | Valor del parámetro hash
 --- | --- | ---
 14 | aBc0123456789 | 484a265cc951ab1ff646506fe4211ba6b3e9e64887968a5d9db1675c624baf99
