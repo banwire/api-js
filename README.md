@@ -433,20 +433,20 @@ Tipo de tarjeta | MasterCard
 Fecha de expiración | 12/19
 Código de seguridad | 162
 
-## Ejemplos en vivo
+### Ejemplos en vivo
 [Ir a la página de ejemplos en vivo](https://test.banwire.com/sw_ex)
 
 ## De sandbox a producción 
 Para pasar a producción el proceso es el siguiente, el representante de la cuenta debe enviar un correo a soporte@banwire.com solicitando su pase a modo de producción, de éste correo se les indicará las instrucciones a realizar en la integración para configurarla para modo de producción.
 
-### Hash de Seguridad
+## Hash de Seguridad
 El parámetro 'hash' es un valor cifrado con el algoritmo SHA256 mediante una clave específica (API-SECRET) usando el método HMAC. Este parámetro se utilizará para poder verificar que el emisor de la notificación recibida está autorizado por el receptor, éste último deberá validar el parámetro Hash, asegurándose que el valor cifrado coincida con el que él calcula.
 
 Todas las Respuestas y Notificaciones que son enviadas desde BanWire en los diferentes eventos del proceso de Secure Window incluyen el parámetro 'hash'.
 
 API-SECRET es un valor único que se genera de forma aleatoria para cada cuenta de BanWire que se encuentran utilizando el API de Secure Window. BanWire sólo revelará ésta información al usuario autorizado de la cuenta (el manejo de ésta información quedará bajo responsabilidad y propio riesgo del usuario). Si se cree o se sabe que ésta información se conoce por un  tercera o sufre algún tipo de riesgo, se debe informar inmediatamente a BanWire para que se pueda generar y proporcionar una nueva API-SECRET. Ésta información se proporcionará una vez el usuario tenga su proceso administrativo terminado, lo que incluye la firma del contrato con BanWire.
 
-## ¿Cómo se calcula el valor del parámetro 'hash'?
+### ¿Cómo se calcula el valor del parámetro 'hash'?
 El parámetro 'hash' es el valor cifrado del parámetro 'id'(Identificador único de la transacción), el cual se incluye dentro de la notificación vía POST que envía BanWire a la URL del parámetro 'notifyUrl' en la integración.
 Ejemplo:
 
