@@ -66,9 +66,10 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     data-ship-state="DF" 
     data-button-caption="Pagar ahora" 
     data-button-class="btn-pay"
+    data-time="900"
     data-item-1-name="Primero" 
     data-item-1-price="100.00" 
-    data-item-1-qty="2" 
+    data-item-1-qty="2"
     data-item-2-name="Segundo" 
     data-item-2-price="100.00" 
     data-item-2-qty="3"> /
@@ -200,6 +201,8 @@ var SW = new BwGateway({
             country: "MEX", //País de envío (3 dígitos de acuerdo al formato ISO)
             zip: "14145" //Código de postal del envío
         },
+        // Cierre automático de la ventana. Por defecto es indefinido y no cerrar la ventana. (el valor es en segundos. valor minimo requerido 60 segundos.)
+        time: 900, // Ejemplo de cierre de ventana automáticamente en 15 minutos
         // Opciones de pago, por defecto es "all". Puede incluir varias opciones separadas por comas
         paymentOptions: 'all', // visa,mastercard,amex,oxxo,speifast,all
         // Mostrar o no pagina de resumen de compra
