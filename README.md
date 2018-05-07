@@ -108,6 +108,7 @@ data-ship-zip | Código postal de la dirección de envío
 data-ship-city | Ciudad de envío
 data-ship-country | País de envío (3 dígitos de acuerdo al formato ISO)
 data-ship-state | Estado de envío (2 dígitos de acuerdo al formato ISO)
+data-time | Cierre automático de la ventana. Por defecto es indefinido y no cerrar la ventana. (el valor es en segundos. valor minimo requerido 60 segundos.)
 data-item-1-name | Nombre del producto uno
 data-item-1-price | Precio del producto uno
 data-item-1-qty | Cantidad de producto (s) uno
