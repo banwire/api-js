@@ -24,7 +24,9 @@ Para integrar utilizando sólo HTML, utiliza el siguiente formato:
     data-reference="Referencia de pago" 
     data-notify-url="https://test.banwire.com/sw/examples/response.php" 
     data-button-caption="Pagar ahora" 
-    data-button-class="btn-pay">
+    data-button-class="btn-pay"
+    data-secure-3d="false"
+    data-international="false">
 </script>
 ```
 
@@ -39,6 +41,8 @@ Para una integración más personalizada se pueden utilizar parámetros adiciona
     data-total="500.00" 
     data-payment-options="visa,amex" 
     data-review-order="true" 
+    data-international="true"
+    data-secure-3d="false"
     data-loading-text="Espere..."
     data-success-page="https://test.banwire.com/sw/examples" 
     data-notify-url="https://test.banwire.com/sw/examples/response.php" 
@@ -89,6 +93,8 @@ data-error-page | Página de error del comercio
 data-pending-page | Página de pago pendiente del comercio (aplica para pagos en OXXO y SPEIFAST)
 data-notify-url | URL del comercio donde BanWire notifica los pagos exitoso
 data-concept | Concepto de pago
+data-international | Configuración especial para pagos internacionales (Segundo apellido opcional)
+data-secure-3d | Habilidar validación de 3D Secure para proteccion de compras ( Afiliación Banorte - Payworks)
 data-reference | ID de pedido del comercio
 data-months | "3,6,9,12" Pago a meses 
 data-currency | Moneda: peso mexicano
@@ -156,6 +162,10 @@ var SW = new BwGateway({
         concept: 'pago de prueba',
         // Opcional: Moneda
         currency: 'MXN',
+        // Opcional: Configuracion especial para pagos internacionales
+        international: false,
+        // Opcional: Habilitar Validacion 3D Secure
+        secure3D: false,
         // Opcional: Tipo de cambio definido por el comercio (En caso de seleccionar una moneda que requiera mostrar el tipo de cambio a MXN. Solo informativo). Ejemplo: 15.00
         exchangeRate: '',
         // Total de la compra
@@ -205,7 +215,7 @@ var SW = new BwGateway({
         // Cierre automático de la ventana. Por defecto es indefinido y no cerrará la ventana. (el valor es en segundos. valor minimo requerido 60 segundos.)
         time: 900, // Ejemplo de cierre de ventana automáticamente en 15 minutos
         // Opciones de pago, por defecto es "all". Puede incluir varias opciones separadas por comas
-        paymentOptions: 'all', // visa,mastercard,amex,oxxo,speifast,all
+        paymentOptions: 'all', // visa, mastercard, amex, paycash, oxxo,speifast,all
         // Mostrar o no pagina de resumen de compra
         reviewOrder: true,
         // Mostrar o no mostrar los campos de envio
@@ -346,6 +356,35 @@ id | Alfanumérico | Identificador de pago dentro de Banwire
 hash | sha1 | Hash de seguridad*
 total | Decimal | Total pagado
 
+## Notificaciones Paycash
+
+### Pago pendiente ***
+Cada vez que se realize una solicitud de pago en las tiendas de conveniencia con sistema Paycash, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+
+Variable | Valor | Descripción
+--- | --- | --- 
+event | paycash | Tipo de evento de la notificación
+status | pending | Estatus de la transacción
+reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
+id | Alfanumérico | Identificador de pago dentro de Banwire
+hash | sha1 | Hash de seguridad*
+total | Decimal | Total pagado
+
+### Pago exitoso
+Cada vez que se recibe un pago vía Paycash, el sistema enviará una notificación vía HTTP POST a la URL establecida en data-notify-url (HTML) o notifyUrl (Javascript) con las siguientes variables:
+
+Variable | Valor | Descripción
+--- | --- | --- 
+event | paycash | Tipo de evento de la notificación
+status | paid | Estatus de la transacción
+auth_code | Alfanumérico | Código de barras del pago
+reference | El enviado inicialmente | La referencia de pago enviada inicialmente por data-reference
+id | Alfanumérico | Identificador de pago dentro de Banwire
+hash | sha1 | Hash de seguridad*
+total | Decimal | Total pagado
+
+
+
 ## Notificaciones SPEIFAST
 
 ### Pendiente ***
@@ -434,7 +473,7 @@ Dato | Valor
 Nombre tarjetahabiente | Pruebasbw 
 Número de Tarjeta | 5134422031476272
 Tipo de tarjeta | MasterCard
-Fecha de expiración | 12/19
+Fecha de expiración | 12/21
 Código de seguridad | 162
 
 ### Ejemplos en vivo
