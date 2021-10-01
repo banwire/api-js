@@ -122,7 +122,7 @@ data-item-1-qty | Cantidad de producto (s) uno
 ### Integración para pagos con tarjeta-habientes representados 
 Para pagos en donde el tarjetahabiente es representado por un tercero en posesión de los datos e información confidencial del tarjeta-habiente, se debe agregar el siguiente parámetro.
 ```html
-data-cust-represented="true"
+data-cust-represent="true"
 ```
 
 ### Integración para pagos recurrentes
